@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class NewBehaviourScript : MonoBehaviour
+public class SettingsUI : MonoBehaviour
 {
     [SerializeField]
     private Button MouseControlButton;
@@ -56,9 +56,9 @@ public class NewBehaviourScript : MonoBehaviour
 
     private IEnumerator CloseAfterDelay()
     {
-        animator.SetTrigger("Close");
+        animator.SetTrigger("close");
         yield return new WaitForSeconds(0.5f);
         gameObject.SetActive(false);
-        animator.ResetTrigger("Close");
+        animator.ResetTrigger("close");
     }
 }
